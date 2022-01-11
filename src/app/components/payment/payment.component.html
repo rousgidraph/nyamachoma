@@ -1,0 +1,39 @@
+<div class="cont">
+    <form>
+        <div class="reciept">
+            <table>
+                <tr>
+                <td><h3>Goods</h3></td>
+                <td><h3>Price</h3></td> 
+                <td><h3>Quantity</h3></td>  
+                <td><h3>Total</h3></td> 
+                </tr>
+
+                <tr  *ngFor="let item of cart.cart_items">
+                    <td><h4>{{item.title}}</h4></td> 
+                    <td><h4>{{item.pricing}}</h4></td>
+                    <td><h4>{{item.count}}</h4></td>  
+                    <td><h4>{{item.total}}</h4></td>
+                </tr>
+            </table>
+           
+
+        </div>
+        <div class="item-cols">
+        <div class="item-group">
+            <label>Phone Number</label>
+            <input type="text" class="form-control">
+        </div>
+        <div class="item-group">
+            <label>Total</label>
+            <input type="text" class="form-control" id="total" name="total" [(ngModel)]="cart.total">
+        </div>
+    </div>
+        <div class="item-cols">
+            <button>cancel</button>
+            <button (click)="tot()">Submit</button>
+        </div>
+        </form>
+
+
+</div>

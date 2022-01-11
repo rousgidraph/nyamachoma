@@ -1,0 +1,11 @@
+<div class="container">
+    <div class="logo">
+        <a href="#"><h2>Nyam Chom</h2></a>
+    </div>
+    <nav>
+        <p>Cart</p>
+        <div class="bubble" *ngIf="cart.size() > 0">
+            {{cart.item_count()}}
+        </div>
+    </nav>
+</div>

@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="item-cols"><!-- one row of items -->
+        <div class="item" *ngFor="let item of menu">
+            <div class="overlay" (click)="add_to_cart(item)">
+                <p>Yum!! Add me..</p>
+            </div>
+            <div class="wrapper">
+                <img [src] = "item.pic"
+                alt="{{ item.pic }}"  >
+                
+            </div>
+            <div class="details" >
+                <h3 class="title">{{item.title}} </h3>
+                <h4 class="price">{{item.pricing}} kes</h4>
+                <p class="details">{{item.description}}</p>
+
+
+            </div>
+        </div>
+        
+    </div>
+    
+</div>

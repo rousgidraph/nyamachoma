@@ -1,0 +1,24 @@
+.cont{    
+    height: 85vh;
+    width: 100%;
+    display: flex;
+}
+
+h2 , p , h3, h4  {
+    font-family: 'Montserrat';
+}
+
+.left{
+    height: 100%;
+    width: 60%;    
+    flex-grow: 2;
+    overflow: scroll;
+    padding: 10px;
+}
+
+.right{
+    height: 100%;
+    width: 50%;    
+    flex-grow: 1;
+    padding: 10px;
+}
