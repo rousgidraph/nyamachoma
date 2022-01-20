@@ -23,6 +23,10 @@ export class HomeComponent implements OnInit {
 
   }
 
+  cancel(){
+    
+  }
+
   add_to_cart(item: MEAL){
     
     this.cart.add(item);

@@ -22,16 +22,22 @@
         <div class="item-cols">
         <div class="item-group">
             <label>Phone Number</label>
-            <input type="text" class="form-control">
+            <input type="text" class="form-control" id="phone" name="phone" [(ngModel)]="req.PhoneNumber">
         </div>
         <div class="item-group">
             <label>Total</label>
-            <input type="text" class="form-control" id="total" name="total" [(ngModel)]="cart.total">
+            <input type="text" class="form-control" id="total" name="total" [(ngModel)]="req.Amount">
         </div>
     </div>
         <div class="item-cols">
-            <button>cancel</button>
-            <button (click)="tot()">Submit</button>
+            <button (click)="getPosts()">cancel</button>
+            <button (click)="createpost()">Submit</button>
+        </div>
+        <div *ngFor="let post of posts | async">
+            {{post | json}}
+        </div>
+        <div *ngIf="newpost">
+            {{newpost | async | json}}
         </div>
         </form>
 
